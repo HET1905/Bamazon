@@ -52,16 +52,19 @@ var buyItem = function () {
                 console.log('Error in fetching records from table ' + err);
             }
             if (parseInt(result[0].stock_quantity) >= parseInt(qty)) {
-                console.log('You have orderd : ' + result[0].product_name);
+                console.log('\n You have orderd : ' + result[0].product_name);
                 console.log("Item id : " + itemId);
                 console.log("Item qty : " + qty);
                 console.log("Order Placed Successfully");
                 var newQty = parseInt(result[0].stock_quantity) - parseInt(qty);
+                
                 var price = parseInt(qty) * parseInt(result[0].price);
+                
+                var prod_sales = parseInt(result[0].product_sales) + price;
                 console.log('--------------------------');
                 console.log('Total Price for your order : ' + price );
 
-                connection.query('UPDATE products SET stock_quantity = ? WHERE item_id= ?',[newQty,itemId],function(err,res){
+                connection.query('UPDATE products SET stock_quantity = ?,product_sales=? WHERE item_id= ?',[newQty,prod_sales,itemId],function(err,res){
                     if(err){
                         console.log('Error in updaing table : ' + err);
                     }
