@@ -48,7 +48,8 @@ function loadFile() {
 // If a manager selects View Products for Sale, the app should list every available item: 
 // the item IDs, names, prices, and quantities.
 function displayAllProducts() {
-    let queryString = `SELECT item_id as ItemID, product_name as ProductName, price as Price,stock_quantity as Quantities
+    let queryString = `SELECT item_id as ItemID, product_name as ProductName,
+                        price as Price,stock_quantity as Quantities,product_sales
                          FROM products`;
     connection.query(queryString, function (err, data) {
         if (err) {
@@ -63,7 +64,7 @@ function displayAllProducts() {
 // If a manager selects View Low Inventory, then it should list all items with an inventory count lower than five.
 function displayLowInventory() {
     let queryString = `SELECT item_id as ItemID, product_name as ProductName,dept_name as DeptName, price as Price,
-                        stock_quantity as Quantities FROM products WHERE stock_quantity<5`;
+                        stock_quantity as Quantities,product_sales FROM products WHERE stock_quantity<5`;
     connection.query(queryString, function (err, data) {
         if (err) {
             console.log(`Error in getting data for inventory less than 5 : ${err}`);

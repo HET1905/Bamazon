@@ -68,6 +68,7 @@ var buyItem = function () {
                     if(err){
                         console.log('Error in updaing table : ' + err);
                     }
+                    console.log('\nTable updated successfully');
 
                 });
                 connection.end();
