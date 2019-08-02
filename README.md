@@ -1,22 +1,22 @@
 # Bamazon
 
 
-
-Bamazon  is a node Command Line Interface programme. It has Three different levels.
-1. Customer Level
-2. Manager Level
-3. Supervisior Level 
+Bamazon  is a node Command Line Interface programme. Data is stored in Mysql database. It has Three different views.
+1. Customer View
+2. Manager View
+3. Supervisior View 
 
 ## How it works.
-1. Customer Level
+
+1. Customer View
     * You can see the products that are for sale.
     * To order a product enter the Item Id.
-2. Manager Level
+2. Manager View
     * View Products for Sale
     * View Low Inventory
     * Add to Inventory 
     * Add New Product
-3. Supervisor Level
+3. Supervisor View
     * View Product Sales by Department
     * Create New Department
 
@@ -24,21 +24,20 @@ Bamazon  is a node Command Line Interface programme. It has Three different leve
 
 ## GIF images for the commands and its output.
 
-1. Customer Level
+1. Customer View
 
-    * ![Concert-this](https://github.com/HET1905/liri-node-app/blob/master/images/concert-this.gif "concert-this1")
+    * ![Customer View](https://github.com/HET1905/Bamazon/blob/master/images/customerView.gif "Customer View")
 
-    * ![Concert-this](https://github.com/HET1905/liri-node-app/blob/master/images/concert-this2.gif "concert-this2")
 
-2. Manager Level
 
-    * ![do-what-it-says1](https://github.com/HET1905/liri-node-app/blob/master/images/do-what-it-says1.gif "do-what-it-says1")
+2. Manager View
 
-    * ![do-what-it-says2](https://github.com/HET1905/liri-node-app/blob/master/images/do-what-it-says2.gif "do-what-it-says2")
+    * ![Manager View](https://github.com/HET1905/Bamazon/blob/master/images/managerView.gif "Manager's View")
 
-3. Supervisor Level
 
-    * ![movie-this](https://github.com/HET1905/liri-node-app/blob/master/images/movie-this1.gif "movie-this")
+3. Supervisor View
+
+    * ![Supervisor View](https://github.com/HET1905/Bamazon/blob/master/images/SupervisorView.gif "Supervisor View")
 
 
 
